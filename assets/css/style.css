@@ -1,0 +1,353 @@
+@font-face {
+  src: url("../fonts/Roboto-Regular.ttf");
+  font-family: "Roboto";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: 0;
+          box-sizing: 0;
+  font-family: "Roboto";
+}
+
+body {
+  color: #ffebe4;
+}
+
+a {
+  color: #ffebe4;
+  text-decoration: none;
+  -webkit-transition: -webkit-filter .1s;
+  transition: -webkit-filter .1s;
+  transition: filter .1s;
+  transition: filter .1s, -webkit-filter .1s;
+}
+
+a:hover {
+  color: #ffebe4;
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
+}
+
+ul {
+  list-style: none;
+}
+
+.font-xs {
+  font-size: 12px;
+}
+
+.font-small {
+  font-size: 16px;
+}
+
+.font-medium {
+  font-size: 19px;
+}
+
+.font-large {
+  font-size: 30px;
+}
+
+.font-xl {
+  font-size: 40px;
+}
+
+.font-xxl {
+  font-size: 60px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffebe4;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f38181;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #7e7e7e;
+}
+
+#main {
+  height: 100vh;
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#container {
+  width: 500px;
+  background-color: #f38181;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.btn {
+  color: #ffebe4;
+}
+
+.btn:hover {
+  color: #ffebe4;
+}
+
+.btn-primary {
+  color: #262368;
+  background-color: #ffebe4;
+  border-color: #ffebe4;
+  padding: .300rem .75rem;
+  -webkit-transition: -webkit-filter .1s;
+  transition: -webkit-filter .1s;
+  transition: filter .1s;
+  transition: filter .1s, -webkit-filter .1s;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  color: #262368;
+  background-color: #ffebe4;
+  border-color: #ffebe4;
+  -webkit-filter: brightness(0.85);
+          filter: brightness(0.85);
+  -webkit-box-shadow: 0 0 0 0 #000;
+          box-shadow: 0 0 0 0 #000;
+}
+
+.btn-primary:focus.btn-primary:active {
+  -webkit-box-shadow: 0 0 0 0 #000 !important;
+          box-shadow: 0 0 0 0 #000 !important;
+}
+
+.login-field {
+  background-color: #f38181;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid #ffebe4;
+  border-radius: 0;
+  color: #ffebe4;
+  -webkit-transition: background-color .1s, color .1s;
+  transition: background-color .1s, color .1s;
+}
+
+#userImage {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#userImage img {
+  border-radius: 50%;
+}
+
+#friendsList {
+  min-height: 20vh;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+.friendDiv {
+  cursor: pointer;
+}
+
+.onlineStatus {
+  height: 15px;
+  width: 15px;
+  border: 2px solid #ffebe4;
+  border-radius: 50%;
+  bottom: -3px;
+  right: -3px;
+}
+
+.online {
+  background-color: green;
+}
+
+.offline {
+  background-color: grey;
+}
+
+.overflowVisible {
+  overflow: visible !important;
+}
+
+.hasUnread {
+  width: 8px;
+  height: 8px;
+  background-color: #f38181;
+  border-radius: 50%;
+}
+
+#messagesContainer {
+  background-color: #ffebe4;
+  height: 30vh;
+  overflow-y: auto;
+}
+
+#tbMessage {
+  resize: none;
+}
+
+.red-text {
+  color: #f38181;
+}
+
+.message p {
+  display: inline-block;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.sender {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-left: 20px;
+}
+
+.sender p {
+  background-color: #f38181;
+}
+
+.receiver {
+  margin-right: 20px;
+}
+
+.receiver p {
+  background-color: #fdd691;
+  color: #262368;
+}
+
+.receiver a {
+  color: #262368;
+}
+
+.receiver a:hover {
+  -webkit-filter: brightness(1.75);
+          filter: brightness(1.75);
+}
+
+.form-control:focus {
+  -webkit-box-shadow: 0 0 0 0 #000;
+          box-shadow: 0 0 0 0 #000;
+}
+
+#userImageBig {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#userImageBig img {
+  border-radius: 50%;
+}
+
+#userImageBig:hover .cover {
+  opacity: 100%;
+}
+
+#username {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#editUsername {
+  display: none;
+}
+
+.beige-border {
+  border: 1px solid #ffebe4;
+}
+
+#editPassword {
+  display: none;
+}
+
+.cover {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  border-radius: 50%;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+  color: #262368;
+  background-color: #ffebe4;
+  border-color: #ffebe4;
+}
+
+.btn.disabled {
+  opacity: 1;
+}
+
+.user-listing {
+  background-color: #ffebe4;
+  color: #262368;
+}
+
+.redLink {
+  color: #f38181;
+}
+
+.redLink:hover {
+  color: #f38181;
+}
+
+#searchList {
+  min-height: 10vh;
+  max-height: 30vh;
+  overflow-y: auto;
+}
+
+#requestsList {
+  min-height: 20vh;
+}
+
+@media screen and (max-width: 767px) {
+  .font-xs {
+    font-size: 10px;
+  }
+  .font-small {
+    font-size: 14px;
+  }
+  .font-medium {
+    font-size: 17px;
+  }
+  .font-large {
+    font-size: 25px;
+  }
+  .font-xl {
+    font-size: 30px;
+  }
+  .font-xxl {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #container {
+    width: 90%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

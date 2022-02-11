@@ -1,0 +1,351 @@
+@font-face {
+    src: url("../fonts/Roboto-Regular.ttf");
+    font-family: "Roboto";
+}
+
+$color-red: rgb(243, 129, 129);
+$color-yellow: rgb(253, 214, 145);
+$color-blue: rgb(38, 35, 104);
+$color-beige: rgb(255, 235, 228);
+
+$color-black-t: rgba(0, 0, 0, 0.3);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: "Roboto";
+}
+
+body {
+    color: $color-beige;
+}
+
+a {
+    color: $color-beige;
+    text-decoration: none;
+    transition: filter .1s;
+    &:hover {
+        color: $color-beige;
+        filter: brightness(.9);
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+// text
+
+.font-xs {
+    font-size: 12px;
+}
+  
+.font-small {
+    font-size: 16px;
+}
+  
+.font-medium {
+    font-size: 19px;
+}
+  
+.font-large {
+    font-size: 30px;
+}
+  
+.font-xl {
+    font-size: 40px;
+}
+  
+.font-xxl {
+    font-size: 60px;
+}
+
+// /text
+
+// scrollbar
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: $color-beige;
+}
+  
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: $color-red;
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #7e7e7e;
+}
+
+// /scrollbar
+
+#main {
+    height: 100vh;
+    background-image: url('../img/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#container {
+    width: 500px;
+    background-color: $color-red;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.btn {
+    color: $color-beige;
+    &:hover {
+        color: $color-beige;
+    }
+}
+
+.btn-primary {
+    color: $color-blue;
+    background-color: $color-beige;
+    border-color: $color-beige;
+    padding: .300rem .75rem;
+    transition: filter .1s;
+    &:hover, &:focus, &:active {
+        color: $color-blue;
+        background-color: $color-beige;
+        border-color: $color-beige;
+        filter: brightness(.85);
+        box-shadow: 0 0 0 0 #000;
+    }
+}
+
+.btn-primary:focus.btn-primary:active {
+    box-shadow: 0 0 0 0 #000 !important;
+}
+
+// login
+.login-field {
+    background-color: $color-red;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid $color-beige;
+    border-radius: 0;
+    color: $color-beige;
+    transition: background-color .1s, color .1s;
+}
+
+// home
+
+#userImage {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+    img {
+        border-radius: 50%;
+    }
+}
+
+#friendsList {
+    min-height: 20vh;
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+.friendDiv {
+    cursor: pointer;
+}
+
+.onlineStatus {
+    height: 15px;
+    width: 15px;
+    border: 2px solid $color-beige;
+    border-radius: 50%;
+    bottom: -3px;
+    right: -3px;
+}
+
+.online {
+    background-color: green;
+}
+
+.offline {
+    background-color: grey;
+}
+
+.overflowVisible {
+    overflow: visible !important;
+}
+
+.hasUnread {
+    width: 8px;
+    height: 8px;
+    background-color: $color-red;
+    border-radius: 50%;
+}
+
+// messages
+#messagesContainer {
+    background-color: $color-beige;
+    height: 30vh;
+    overflow-y: auto;
+}
+
+#tbMessage {
+    resize: none;
+}
+
+.red-text {
+    color: $color-red;
+}
+
+.message {
+    p {
+        display: inline-block;
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+}
+
+.sender {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 20px;
+    p {
+        background-color: $color-red;
+    }
+}
+
+.receiver {
+    margin-right: 20px;
+    p {
+        background-color: $color-yellow;
+        color: $color-blue;
+    }
+    a {
+        color: $color-blue;
+        &:hover {
+            filter: brightness(1.75);
+        }
+    }
+}
+
+// edit
+
+.form-control {
+    &:focus {
+        box-shadow: 0 0 0 0 #000;
+    }
+}
+
+#userImageBig {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    cursor: pointer;
+    img {
+        border-radius: 50%;
+    }
+    &:hover {
+        .cover {
+            opacity: 100%;
+        }
+    }
+}
+
+#username {
+    display: flex;
+}
+
+#editUsername {
+    display: none;
+}
+
+.beige-border {
+    border: 1px solid $color-beige;
+}
+
+#editPassword {
+    display: none;
+}
+
+.cover {
+    background-color: $color-black-t;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    border-radius: 50%;
+    transition: opacity .2s;
+}
+
+// add friends
+.btn-primary.disabled, .btn-primary:disabled {
+    color: $color-blue;
+    background-color: $color-beige;
+    border-color: $color-beige;
+}
+
+.btn.disabled {
+    opacity: 1;
+}
+
+.user-listing {
+    background-color: $color-beige;
+    color: $color-blue;
+}
+
+.redLink {
+    color: $color-red;
+    &:hover {
+        color: $color-red;
+    }
+}
+
+#searchList {
+    min-height: 10vh;
+    max-height: 30vh;
+    overflow-y: auto;
+}
+
+// requests
+#requestsList {
+    min-height: 20vh;
+}
+
+// media queries
+
+@media screen and (max-width: 767px) {
+    .font-xs {
+        font-size: 10px;
+    }
+    .font-small {
+        font-size: 14px;
+    }
+    .font-medium {
+        font-size: 17px;
+    }
+    .font-large {
+        font-size: 25px;
+    }
+    .font-xl {
+        font-size: 30px;
+    }
+    .font-xxl {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    #container {
+        width: 90%;
+    }
+}
